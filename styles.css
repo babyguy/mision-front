@@ -1,0 +1,264 @@
+/* ----------------------global---------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* fondo predeterminado */
+body {
+  background-color: var(--my-background);
+}
+
+/* boton predeterminado */
+
+.btn {
+  text-decoration: none;
+  color: var(--my-strong);
+  background-color: var(--my-textLigth);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 200;
+}
+
+/* divider */
+.divider {
+  width: 90%;
+  border-top: 1px solid var(--my-shadow);
+}
+
+/* ----------------------pallete colors---------------------- */
+:root {
+  /* link pallet */
+  /* https://colors.muz.li/palette/8a2be2/4a1e9e/ddcbff/bb98ff/ffffff */
+  --my-background: #eae9e9;
+  --my-shadow: #333;
+  --my-strong: #4a1e9e;
+  --my-hover: #340c5a;
+  --my-textLigth: #ddcbff;
+}
+
+/* ----------------------barra de navegacion---------------------- */
+.navbar {
+  margin-top: 2em;
+  padding: 2em;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.nav-link {
+  font-size: 1.5em;
+  font-weight: 300;
+  color: var(--my-strong);
+  margin: 10px;
+}
+
+.nav-link:hover {
+  background-color: var(--my-textLigth);
+  border-radius: 10px;
+  color: var(--my-strong);
+}
+/* ----------------------sup lista productos---------------------- */
+
+/* secciones de la pagina para que quede horizontal y opprdenado */
+.productos_sec1 {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.productos_search {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.productos_delete_add {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* pagina  */
+.name-pag {
+  color: var(--my-strong);
+  font-size: 2em;
+  font-weight: 600;
+}
+
+/* search */
+.productos_search p {
+  font-size: 1em;
+  color: var(--my-strong);
+}
+.bi-filter {
+  color: var(--my-strong);
+}
+.search-items {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  width: 20em;
+  height: 2em;
+}
+
+/* botones */
+.btn-delete {
+  background-color: rgba(251, 58, 58, 0.785);
+  color: white;
+}
+
+.btn-add {
+  background-color: var(--my-strong);
+  color: white;
+}
+
+/* ----------------------mid lista productos---------------------- */
+
+.list-items-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.list-items {
+  width: 82%;
+  height: 62vh;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.items-container {
+  width: 100%;
+  padding: 10px 30px;
+}
+.items-title {
+  width: 100%;
+  color: var(--my-strong);
+  text-align: center;
+}
+
+/* ----------------------modal---------------------- */
+
+.modal-container {
+  width: 70%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.modal-sect1 {
+  width: 60%;
+  height: 45vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-contiiner {
+  height: 350px;
+  width: 350px;
+  background-color: var(--my-textLigth);
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.list-img{
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: start;
+  color: white;
+  flex-wrap: wrap;
+  overflow: hidden;
+  gap: 10px;
+}
+.img-from{
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  background-color: var(--my-strong);
+  
+}
+
+.modal-from1 form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--my-strong);
+  font-size: 1.3em;
+  margin: 0px 20px;
+}
+
+.input-from{
+  height: 2em;
+  width: 300px;
+  border: 1px solid var(--my-hover);
+  border-radius: 10px;
+}
+
+.modal-sect2{
+  width: 30%;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: var(--my-strong);
+  font-size: 1.5em;
+}
+
+.modal-sect3{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.especificaciones{
+  color: var(--my-strong);
+  font-size: 1em;
+}
+.especificaciones textarea {
+  width: 100%;
+  padding: 10px 2em;
+  font-size: 1rem;
+  color: var(--my-strong);
+  resize: none;
+}
+
+/* ----------------------ocultar modal---------------------- */
+
+#modal {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  position: fixed;
+  top: -100vh;
+  height: 100vh;
+  width: 100vw;
+  transition: all .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#cerrar-modal{
+  display: none;
+}
+
